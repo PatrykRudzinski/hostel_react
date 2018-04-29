@@ -1,4 +1,4 @@
-# hostel_react
+# Hostel React
 Simple app in ReactJS, using weather API and firebase
 
 https://patrykrudzinski.github.io/hostel_react/
