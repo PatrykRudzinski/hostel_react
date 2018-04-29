@@ -1,0 +1,35 @@
+.page-hero{
+  height: 100vh;
+  background: url('/images/hero/lights-night-street-8819.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  h1{
+    font-size: 65px;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: 200px;
+    text-shadow: 1px 1px 4px black,
+                 1px -1px 4px black,
+                 -1px 1px 4px black,
+                 -1px -1px 4px black;
+  }
+}
+
+.page-offert {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  .offert-item {
+
+    font-size: 32px;
+    text-align: center;
+    padding: 40px;
+    margin: 100px 0 ;
+    border: 2px solid #777;
+    width: 200px;
+  }
+}

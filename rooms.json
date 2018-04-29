@@ -1,0 +1,20 @@
+//https://hostel-react.firebaseio.com/0.json
+
+{
+  bunkBeds: 0,
+  dates: [
+    "12.05.2018",
+    "13.05.2018",
+    "14.05.2018",
+    "21.06.2018",
+    "22.06.2018"
+  ],
+  doubleBeds: 0,
+  images: [
+    "url",
+    "url"
+  ],
+  info: "cos tam",
+  places: 2,
+  singleBeds: 2
+}

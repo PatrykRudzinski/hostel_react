@@ -2,21 +2,39 @@ import React from 'react';
 import {
     HashRouter,
     Route,
-    NavLink as Link,
-    Switch,
-    NavLink,
+    Switch
   } from 'react-router-dom';
+import {Navigation} from './navigation.jsx';
 import {HomePage} from './_homePage.jsx';
-import {Navigation} from "./_navigation.jsx";
+import {NotFound} from './_notFound.jsx';
+import {Weather} from './_weather.jsx';
+import {Rooms} from './_rooms.jsx';
+import {RoomDetails} from './_roomDetails.jsx';
 
 
 class Routing extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            fetchedData: []
+        }
+    }
+    updateState=(data)=>{
+        const ar = [...this.state.fetchedData];
+        ar.push(data);
+        this.setState({
+            fetchedData: ar
+        })
+    };
     render() {
         return <HashRouter>
             <div>
-                <Navigation/>
+                <Navigation dataRouting={this.state.fetchedData}/>
                 <Switch>
                     <Route exact path='/' component={HomePage}/>
+                    <Route path='/weather' component={Weather}/>
+                    <Route exact path='/Rooms' component={()=> <Rooms func={this.updateState}/>}/>
+                        <Route path='/Rooms/:country' component={RoomDetails}/>
                     <Route path='*' component={NotFound}/>
                 </Switch>
             </div>
