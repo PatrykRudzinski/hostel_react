@@ -21,7 +21,6 @@ class RoomDetails extends React.Component{
         const fetched = this.props.fetchedData.findIndex(el=>{
             return el.id == roomNumber
         });
-        console.log(fetched);
         if(fetched === -1) {
             fetch(url).then(res => res.json())
                 .then(res => {

@@ -15,6 +15,10 @@
     li {
       display: inline;
       margin: 0 10vw;
+      
+      @media (max-width: 630px) {
+        margin: 0 3vw;
+      }
 
       a {
         text-decoration: none;
