@@ -39,7 +39,7 @@ class Offert extends React.Component{
 class HomePage extends React.Component{
     render(){
         return <main>
-            <Hero />
+            <Hero/>
             <Offert/>
         </main>
     }

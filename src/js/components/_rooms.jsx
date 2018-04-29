@@ -1,16 +1,25 @@
 import React from 'react';
+import {NavLink as Link} from 'react-router-dom';
 
-const url = 'https://hostel-react.firebaseio.com/0.json'
+class Room extends React.Component{
+    render(){
+        return <article>
+            <div>{this.props.children}</div>
+            <div><Link to={`/rooms/${this.props.index}`}>więcej informacji</Link></div>
+        </article>
+    }
+}
 
 class Rooms extends React.Component{
 
-    updateDB=()=>{
-        this.props.func({obj: Math.random()})
-    };
-
     render(){
-        //console.log(this.props.match.params.country);
-        return <button onClick={this.updateDB}>btn</button>
+        return <section>
+            <Room index={0}> Pokój dwuosobowy </Room>
+            <Room index={1}> Pokój czteroosobowy </Room>
+            <Room index={2}> Pokój pięcioosobowy </Room>
+            <Room index={3}> Pokój ośmioosobowy </Room>
+            <Room index={4}> Pokój dwunastoosobowy </Room>
+        </section>
     }
 }
 

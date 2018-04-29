@@ -18,7 +18,7 @@ class Routing extends React.Component{
         this.state = {
             fetchedData: []
         }
-    }
+    };
     updateState=(data)=>{
         const ar = [...this.state.fetchedData];
         ar.push(data);
@@ -33,8 +33,11 @@ class Routing extends React.Component{
                 <Switch>
                     <Route exact path='/' component={HomePage}/>
                     <Route path='/weather' component={Weather}/>
-                    <Route exact path='/Rooms' component={()=> <Rooms func={this.updateState}/>}/>
-                        <Route path='/Rooms/:country' component={RoomDetails}/>
+                    <Route exact path='/rooms' component={Rooms}/>
+                    <Route path='/rooms/:number' component={()=> <RoomDetails
+                        func={this.updateState}
+                        fetchedData={this.state.fetchedData}
+                    />}/>
                     <Route path='*' component={NotFound}/>
                 </Switch>
             </div>
