@@ -1,0 +1,34 @@
+.page-rooms {
+
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .room {
+
+    display: flex;
+    width: 50vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border: 2px solid #777;
+    .room-name {
+      font-size: 21px;
+    }
+    .room-more {
+      font-size: 18px;
+      background-color: tomato;
+      padding: 10px 20px;
+      border-radius: 10px;
+
+      a {
+        text-decoration: none;
+        color: #fafafa;
+      }
+    }
+  }
+}

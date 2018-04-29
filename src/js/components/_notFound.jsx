@@ -10,18 +10,22 @@ class NotFound extends React.Component{
     }
 
     componentDidMount(){
-        const timer = setTimeout(()=>{
+        this.timer = setTimeout(()=>{
             this.setState({
                 back: !this.state.back,
             })
         }, 5000)
     }
 
+    componentWillUnmount(){
+        clearTimeout(this.timer)
+    }
+
     render(){
         if(this.state.back){
             return <Redirect to='/' />
         } else {
-            return <h1>Not found</h1>
+            return <h1 className={'not_found'}>Not&nbsp;found</h1>
         }
     }
 }

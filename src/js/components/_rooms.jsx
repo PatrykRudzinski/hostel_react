@@ -3,9 +3,9 @@ import {NavLink as Link} from 'react-router-dom';
 
 class Room extends React.Component{
     render(){
-        return <article>
-            <div>{this.props.children}</div>
-            <div><Link to={`/rooms/${this.props.index}`}>więcej informacji</Link></div>
+        return <article className={'room'}>
+            <div className={'room-name'}>{this.props.children}</div>
+            <div className={'room-more'}><Link to={`/rooms/${this.props.index}`}>więcej informacji</Link></div>
         </article>
     }
 }
@@ -13,7 +13,7 @@ class Room extends React.Component{
 class Rooms extends React.Component{
 
     render(){
-        return <section>
+        return <section className={'page-rooms'}>
             <Room index={0}> Pokój dwuosobowy </Room>
             <Room index={1}> Pokój czteroosobowy </Room>
             <Room index={2}> Pokój pięcioosobowy </Room>

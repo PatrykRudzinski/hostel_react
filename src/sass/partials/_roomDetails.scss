@@ -1,3 +1,72 @@
 .page-room_details {
-  margin-top: 100px;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+
+  .room-back {
+    font-size: 18px;
+    background-color: tomato;
+    padding: 10px 20px;
+    margin: 80px 30px;
+    border-radius: 10px;
+    width: 60px;
+
+    a {
+      text-decoration: none;
+      color: #fafafa;
+    }
+  }
+
+  .room-info {
+    padding: 30px 50px;
+    width: 60vw;
+    align-self: center;
+    border: 2px solid #777;
+    font-size: 32px;
+  }
+
+  .room-beds {
+    border-top: 2px solid #777 ;
+    border-left: 2px solid #777 ;
+    padding: 30px 50px;
+    width: calc(60vw - 30px);
+    align-self: center;
+    font-size: 26px;
+    margin-top: 50px;
+    margin-left: 30px;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .room-dates {
+    border-bottom: 2px solid #777 ;
+    border-right: 2px solid #777 ;
+    padding: 30px 50px;
+    width: calc(60vw - 30px);
+    align-self: center;
+    font-size: 26px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background: linear-gradient(
+                    transparent 0%,
+                    transparent 50%,
+                    rgba(#444, 0.5) 50%,
+                    rgba(#444, 0.5) 100%
+    );
+    ul {
+      list-style: none;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      li{
+        margin: 0 10px;
+      }
+    }
+  }
+
 }

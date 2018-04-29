@@ -2,11 +2,14 @@
 @import 'partials/navigation';
 @import 'partials/home';
 @import 'partials/weather';
+@import 'partials/rooms';
 @import 'partials/roomDetails';
-@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
+@import 'partials/notfound';
+//@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800');
 
 body{
   color: #222;
   font-family: 'Dosis', sans-serif;
-  font-weight: 200;
+  //font-weight: 200;
+  overflow-x: hidden;
 }

@@ -59,11 +59,18 @@ class RoomDetails extends React.Component{
             {this.state.bunkBeds > 0 && <li>Liczba łóżek piętrowych: {this.state.bunkBeds}</li>}
         </ul>;
 
+        this.dates = this.state.dates && this.state.dates.map(el=>{
+            return <li key={el}>{el}</li>
+        });
+
         return <div className={'page-room_details'}>
-            <Link to={`/rooms`}>Powrót</Link>
-            <div>{this.state.info}</div>
-            <div>{this.beds}</div>
-            <div>{this.state.dates}</div>
+            <div className={'room-back'}><Link to={`/rooms`}>Powrót</Link></div>
+            <div className={'room-info'}>{this.state.info}</div>
+            <div className={'room-beds'}>{this.beds}</div>
+            <div className={'room-dates'}>
+                <p>Zarezerwowane daty:</p>
+                <ul>{this.dates}</ul>
+            </div>
         </div>
     }
 }

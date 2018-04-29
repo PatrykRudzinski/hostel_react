@@ -1,0 +1,18 @@
+
+
+.not_found {
+  position: absolute;
+  display: block;
+  left: -600px;
+  top: 30vh;
+  font-size: 100px;
+  animation: slide 5s 0s forwards linear;
+}
+
+
+@keyframes slide {
+  100% {
+    left: 100vw;
+  }
+}
+
