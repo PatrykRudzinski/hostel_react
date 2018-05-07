@@ -5,5 +5,5 @@ https://patrykrudzinski.github.io/hostel_react/
 Weather API doesn't work on github pages.
 
 To run locally:
-*fork and download
-*run index.html
+* fork and download
+* run index.html
