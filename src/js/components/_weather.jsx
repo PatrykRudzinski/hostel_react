@@ -38,7 +38,7 @@ class Weather extends React.Component{
     }
     componentDidMount(){
         const apiKey = '846988b76bd5ebc2a770a26ca075598a';
-        const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&APPID=${apiKey}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&APPID=${apiKey}`;
         fetch(apiUrl).then(res=>res.json())
             .then(res=>{
                 this.setState({

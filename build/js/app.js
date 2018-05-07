@@ -27420,7 +27420,7 @@ var Weather = function (_React$Component4) {
             var _this5 = this;
 
             var apiKey = '846988b76bd5ebc2a770a26ca075598a';
-            var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&APPID=' + apiKey;
+            var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=Warsaw,pl&APPID=' + apiKey;
             fetch(apiUrl).then(function (res) {
                 return res.json();
             }).then(function (res) {
