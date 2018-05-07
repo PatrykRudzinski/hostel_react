@@ -19,7 +19,6 @@ class Navigation extends React.Component{
                 <li><Link exact to='/' activeClassName={'navigation-active'}>Home</Link></li>
                 <li><Link to='/weather' activeClassName={'navigation-active'}>Pogoda</Link></li>
                 <li><Link to='/rooms' activeClassName={'navigation-active'}>Pokoje</Link></li>
-            {/*<Link to='/contact'>Kontakt</Link>*/}
             </ul>
         </nav>
     }

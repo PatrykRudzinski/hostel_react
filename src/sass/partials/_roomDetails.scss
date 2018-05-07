@@ -12,6 +12,10 @@
     border-radius: 10px;
     width: 50px;
 
+    @media (max-width: 630px) {
+      margin: 40px 15px;
+    }
+
     a {
       text-decoration: none;
       color: #fafafa;
@@ -24,6 +28,10 @@
     align-self: center;
     border: 2px solid #777;
     font-size: 32px;
+
+    @media (max-width: 630px) {
+      font-size: 24px;
+    }
   }
 
   .room-beds {
@@ -35,6 +43,11 @@
     font-size: 26px;
     margin-top: 50px;
     margin-left: 30px;
+
+    @media (max-width: 630px) {
+      font-size: 21px;
+    }
+
     ul {
       list-style: none;
       margin: 0;
@@ -51,6 +64,12 @@
     font-size: 26px;
     margin-top: 50px;
     margin-left: 30px;
+
+
+    @media (max-width: 630px) {
+      font-size: 21px;
+    }
+
     ul {
       list-style: none;
       margin: 0;

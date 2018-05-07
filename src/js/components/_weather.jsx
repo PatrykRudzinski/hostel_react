@@ -7,13 +7,7 @@ class Temp extends React.Component{
         </article>
     }
 }
-// class Desc extends React.Component{
-//     render(){
-//         return <article className={'weather-desc'}>
-//             <div>{this.props.data}</div>
-//         </article>
-//     }
-// }
+
 class Wind extends React.Component{
     render(){
         return <article className={'weather-wind'}>
@@ -35,6 +29,7 @@ class Weather extends React.Component{
         super(props);
         this.state={
             ready: false,
+            err: null,
             desc: null,
             temp: null,
             pressure: null,
@@ -53,18 +48,29 @@ class Weather extends React.Component{
                     pressure: res.main.pressure,
                     wind: res.wind.speed
                 });
-        })
+            })
+            .catch(error => {
+                this.setState({
+                    err: error
+                });
+                console.error(error);
+            })
     }
     render(){
-        if(this.state.ready) {
+        if(this.state.ready && !this.state.err) {
             return <section className={'page-weather'}>
                 <Temp data={this.state.temp}/>
-                {/*<Desc data={this.state.desc}/>*/}
                 <Wind data={this.state.wind}/>
                 <Pressure data={this.state.pressure}/>
             </section>
+        } else if(this.state.err) {
+            return <section className={'page-weather'}>
+                <div className={'weather-wind'}>Nie udało się wczytać danych pogodowych</div>
+            </section>
         } else {
-            return null
+            return <section className={'page-weather'}>
+                <div className={'api-loader'}> </div>
+            </section>
         }
     }
 }

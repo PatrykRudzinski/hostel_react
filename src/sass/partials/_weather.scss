@@ -31,5 +31,22 @@
     flex-grow: 1;
   }
 
+  .api-loader {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid rgba(tomato, 0.5);
+    border-right: 3px solid tomato;
+    animation: loading 1s 0s infinite linear;
+  }
+
+
+  @keyframes loading {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 }
+

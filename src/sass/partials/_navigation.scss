@@ -9,6 +9,7 @@
   justify-content: center;
 
   ul{
+    padding: 0;
     list-style: none;
 
 
@@ -17,7 +18,12 @@
       margin: 0 10vw;
       
       @media (max-width: 630px) {
-        margin: 0 3vw;
+      margin: 0 3vw;
+      }
+
+
+      @media (max-width: 400px) {
+        margin: 0 5px;
       }
 
       a {

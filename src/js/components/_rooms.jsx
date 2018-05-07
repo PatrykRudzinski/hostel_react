@@ -5,7 +5,7 @@ class Room extends React.Component{
     render(){
         return <article className={'room'}>
             <div className={'room-name'}>{this.props.children}</div>
-            <div className={'room-more'}><Link to={`/rooms/${this.props.index}`}>więcej informacji</Link></div>
+            <div className={'room-more'}><Link to={`/rooms/${this.props.index}`}>więcej <span>informacji</span></Link></div>
         </article>
     }
 }
