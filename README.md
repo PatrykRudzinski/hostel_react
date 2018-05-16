@@ -13,5 +13,5 @@
 * Webpack
 
 _### To run locally:_
-_* fork and download_
-_* run index.html_
+* _ fork and download_
+* _ run index.html_
