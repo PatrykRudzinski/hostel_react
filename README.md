@@ -12,6 +12,6 @@
 * Sass
 * Webpack
 
-_### To run locally:_
-* _ fork and download_
-* _ run index.html_
+### To run locally:
+*  fork and download
+* _run index.html_
