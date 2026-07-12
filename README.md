@@ -1,17 +1,23 @@
-# [Hostel React](https://patrykrudzinski.github.io/hostel_react/)
+# Hostel React
 
-## Simple single page app in ReactJS, using weather API and firebase
+Single-page hostel app with Open Weather API and cached room data. React, React Router, Sass, and Webpack.
 
-## functionality:
-* Fetching and display data (temperature, wind speed, pressure) from Open Weather API,
-* Fetching and display details about rooms in imaginary hostel, __app is not fetching twice, if user check given room browser won't request again for data__. Data is stored in selfmade database.
+## Setup
 
-## Tech stack:
-* React
-* React Router
-* Sass
-* Webpack
+```bash
+npm install
+```
 
-### _To run locally:_
-*  _fork and download_
-* _run index.html_
+## Run
+
+```bash
+npm start
+```
+
+Dev server runs at http://localhost:3002
+
+## Build
+
+```bash
+npm run bundle
+```
